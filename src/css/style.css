@@ -27,9 +27,24 @@ h1 {
 }
 
 /* This uses the same value as --size-xs. */
-@media screen and (width >= 320px) {
+@media screen and (width >=320px) {
 	.content-container {
 		margin: 0 auto;
 		max-width: 768px;
 	}
+}
+
+button {
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+	display: inline-block;
+	background: yellow;
+	padding: 20px;
+	border: 5px solid blue;
+}
+
+.home {
+	display: inline-block;
+	border: 2px solid black;
 }
