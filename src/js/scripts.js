@@ -43,5 +43,10 @@ function showPage(pageId) {
 	pages.forEach(page => {
 		page.style.display = 'none';
 	});
-	document.getElementById(pageId).style.display = 'block';
+	const specificPage = document.getElementById(pageId);
+	if (specificPage) {
+		specificPage.style.display = 'block';
+	} else {
+		console.error('Page with ID ' + pageId + ' not found.');
+	}
 }
