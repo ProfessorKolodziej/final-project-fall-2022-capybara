@@ -6,10 +6,13 @@
 // - Run npm run test regularly to check autograding
 // - You'll need to link this file to your HTML :)
 
+//home page
 enter.addEventListener('click', function () {
 	showPage('menuPage');
 });
 
+
+//menu page
 meditation.addEventListener('click', function () {
 	showPage('meditationPage');
 });
@@ -18,10 +21,14 @@ storyTime.addEventListener('click', function () {
 	showPage('storyPage');
 });
 
+//somethingSpecial.addEventListener('click', function () {showPage('specialPage');});
+
 backtoHome.addEventListener('click', function () {
 	showPage('homePage');
 });
 
+
+//meditation page
 backtoMenu.addEventListener('click', function () {
 	showPage('menuPage');
 });
