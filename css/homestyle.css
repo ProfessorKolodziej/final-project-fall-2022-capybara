@@ -1,0 +1,75 @@
+/*
+CSS controls the styling of the page.
+You can write a color in directly, or use variables.
+Try changing the color from blue to red in the
+primary color variable below.
+*/
+
+:root {
+	--color-primary: blue;
+	--color-secondary: #c00;
+}
+
+/*
+CSS doesn't allow variables to be used in media
+queries just yet, but you can use these values
+to help you out.
+
+	--size-xs: 320px;
+	--size-sm: 480px;
+	--size-md: 768px;
+	--size-lg: 1024px;
+	--size-xl: 1200px;
+*/
+body {
+	background-color: aqua;
+	max-width: 1080px;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.content {
+	max-width: 1080px;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h1 {
+	color: var(--color-primary);
+}
+
+/* This uses the same value as --size-xs. */
+@media screen and (width >=320px) {
+	.content-container {
+		margin: 0 auto;
+		max-width: 1080px;
+	}
+}
+
+button {
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+	display: inline-block;
+	background: yellow;
+	padding: 20px;
+	border: 5px solid blue;
+}
+
+.home {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	background-size: contain;
+	background-position: center center;
+}
