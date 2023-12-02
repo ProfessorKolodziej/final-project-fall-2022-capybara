@@ -35,6 +35,7 @@ backtoMenu.addEventListener('click', function () {
 
 startMeditation.addEventListener('click', function () {
 	showPage('meditationStartPage');
+	console.log('start meditation');
 });
 
 backtoMeditation.addEventListener('click', function () {
