@@ -1,0 +1,161 @@
+/*
+CSS controls the styling of the page.
+You can write a color in directly, or use variables.
+Try changing the color from blue to red in the
+primary color variable below.
+*/
+
+:root {
+	--color-primary: blue;
+	--color-secondary: #c00;
+}
+
+/*
+CSS doesn't allow variables to be used in media
+queries just yet, but you can use these values
+to help you out.
+
+	--size-xs: 320px;
+	--size-sm: 480px;
+	--size-md: 768px;
+	--size-lg: 1024px;
+	--size-xl: 1200px;
+*/
+body {
+	background-color: rgb(84 62 47);
+
+}
+
+/* This uses the same value as --size-xs. */
+@media screen and (width >=320px) {}
+
+@media screen and (width >=834px) {}
+
+@media screen and (width >=1512px) {
+	/* img {
+		width: 100%;
+		height: auto;
+		background-position: center center;
+	}
+
+	#word1 {
+		position: relative;
+	}
+
+	#background1 {
+		position: relative;
+		z-index: 1;
+	}
+
+	#realcapybara {
+		z-index: 2;
+	} */
+
+	/* .page {
+		position: relative;
+		max-width: 100%;
+		height: auto;
+
+	}
+
+	.box {
+		position: absolute;
+	}
+
+	.word {
+		z-index: 1;
+	}
+
+	.button {
+		z-index: 1;
+	}
+
+	.background {
+		z-index: -1;
+	}
+
+	.image-responsive {
+		max-width: 100%;
+		height: auto;
+	} */
+
+	/* .container {
+
+
+		position: relative;
+	}
+
+	.box {
+		position: absolute;
+	}
+
+	.background {
+		z-index: -1;
+	}
+
+	.button {
+		z-index: 1;
+	}
+
+
+	.image-responsive {
+		max-width: 100%;
+		height: auto;
+	}
+} */
+}
+
+.image-container {
+	position: relative;
+	max-width: 100%;
+	height: auto;
+}
+
+.bottom-image,
+.top-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.bottom-image {
+	max-width: 100%;
+	width: auto;
+	z-index: -1;
+}
+
+.top-image {
+	/* Adjust these values to control the overlap */
+	z-index: 1;
+	display: flex;
+	width: 30%;
+	top: 60px;
+	left: 35%;
+}
+
+h1 {
+	position: absolute;
+	display: flex;
+	top: 500px;
+	left: 43%;
+	color: blueviolet;
+	font-size: x-large;
+}
+
+button {
+	position: absolute;
+	display: flex;
+	top: 600px;
+	left: 43%;
+	color: blueviolet;
+	font-size: x-large;
+}
+
+.backHome {
+	position: absolute;
+	display: flex;
+	top: 650px;
+	left: 43%;
+	color: blueviolet;
+	font-size: x-large;
+}

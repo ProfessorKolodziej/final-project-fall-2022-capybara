@@ -1,0 +1,83 @@
+/*
+CSS controls the styling of the page.
+You can write a color in directly, or use variables.
+Try changing the color from blue to red in the
+primary color variable below.
+*/
+
+:root {
+	--color-primary: blue;
+	--color-secondary: #c00;
+}
+
+/*
+CSS doesn't allow variables to be used in media
+queries just yet, but you can use these values
+to help you out.
+
+	--size-xs: 320px;
+	--size-sm: 480px;
+	--size-md: 768px;
+	--size-lg: 1024px;
+	--size-xl: 1200px;
+*/
+a,
+h1,
+button {
+	text-decoration: inherit;
+}
+
+body {
+	background-color: rgb(84 62 47);
+}
+
+.page {
+	position: relative;
+	max-width: 100%;
+	height: auto;
+}
+
+.word {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%
+}
+
+.background {
+	position: absolute;
+	max-width: 100%;
+	z-index: 0;
+}
+
+
+
+/* This uses the same value as --size-xs. */
+@media screen and (width >=320px) {}
+
+@media screen and (width >=834px) {}
+
+@media screen and (width >=1512px) {
+	/* .page {
+		position: relative;
+		max-width: 100%;
+		height: auto;
+	}
+
+	.image {
+		position: absolute;
+		max-width: 100%;
+		z-index: -1;
+	}
+
+	.word {
+		position: absolute;
+		z-index: 1;
+	}
+
+	.background {
+		position: absolute;
+		max-width: 100%;
+		z-index: -1;
+	}
+} */}

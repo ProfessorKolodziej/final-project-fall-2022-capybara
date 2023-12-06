@@ -10,20 +10,138 @@
 	<!--
 			This is where you should link your CSS file.
 		-->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/storystyle.css">
 </head>
 
 <body>
-	<section class="page" id="storyPage">
-		<h1> How are you feeling today? </h1>
-		<button id="imGood"> I'm good!</button>
-		<button id="notsoWell"> Not so well... </button>
-		<button id="home"> Back to Home </button>
+	<section class="page" id="page1">
+		<section class="word" id="word1">
+			<h1> How are you feeling today? </h1>
+			<button class="nextButton"> I'm good!</button>
+			<button class="skipButton"> Not so well... </button>
+			<a href="menu.html"> Back to Home </a>
+		</section>
+		<section class="image" id="image1">
+			<img src="images/story asking.jpg" alt="storyasking" class="background">
+		</section>
 	</section>
 
-	<section class="page" id="goodPage">
-		<h1> That's nice! I really want to hang out with you! Shall we? </h1>
+	<section class="page" id="page2" style="display:none;">
+		<section class="word" id="word2">
+			<h1> That's nice! I really want to hang out with you! Shall we? </h1>
+			<button class="skipButton"> Let's go!</button>
+			<button class="2skipButton"> I'm tired. </button>
+			<a href="menu.html"> Back to Home </a>
+		</section>
+		<section class="image" id="image2">
+			<img src="images/story asking.jpg" alt="storyasking" class="background">
+		</section>
 	</section>
+
+	<section class="page" id="page3" style="display:none;">
+		<section class="word" id="word3">
+			<h1> Ohhh, I'm sorry to hear that, do you want to spend some time walking around? </h1>
+			<button class="nextButton"> Let's go!</button>
+			<button class="skipButton"> I'm tired. </button>
+			<a href="menu.html"> Back to Home </a>
+		</section>
+		<section class="image" id="image3">
+			<img src="images/story asking.jpg" alt="storyasking" class="background">
+		</section>
+	</section>
+
+	<section class="page" id="page4" style="display:none;">
+		<section class="word" id="word4">
+			<h1>Get on my back! Let's go!!!</h1>
+			<button class="skipButton"> Yeahhh!</button>
+			<a href="menu.html"> Back to Home </a>
+		</section>
+		<section class="image" id="image4">
+			<img src="images/story asking.jpg" alt="storyasking" class="background">
+		</section>
+	</section>
+
+	<section class="page" id="page5" style="display:none;">
+		<section class="word" id="word5">
+			<h1>Alright, have a nice rest! See you next time!</h1>
+			<a href="menu.html"> See you soon! </a>
+			<a href="menu.html"> Back to Home </a>
+		</section>
+		<section class="image" id="image5">
+			<img src="images/story asking.jpg" alt="storyasking" class="background">
+		</section>
+	</section>
+
+	<section class="page" id="page6" style="display:none;">
+		<section class="word" id="word6">
+			<h1>I see a rabbit over there. Let's talk to it!</h1>
+			<button class="nextButton"> Sure!</button>
+			<a href="menu.html"> Back to Home </a>
+		</section>
+		<section class="image" id="image6">
+			<img src="images/hanging out.jpg" alt="hanging out" class="background">
+		</section>
+	</section>
+
+	<section class="page" id="page7" style="display:none;">
+		<section class="word" id="word7">
+			<h1>Hi!</h1>
+			<h1>Nice to meet you!</h1>
+			<button class="nextButton"> Continue </button>
+			<a href="menu.html"> Back to Home </a>
+		</section>
+		<section class="image" id="image7">
+			<img src="images/meet rabbit.jpg" alt="meet rabbit" class="background">
+		</section>
+	</section>
+
+	<section class="page" id="page8" style="display:none;">
+		<section class="word" id="word8">
+			<h1>See you soon!</h1>
+			<h1>Bye!</h1>
+			<button class="nextButton"> Continue</button>
+			<a href="menu.html"> Back to Home </a>
+		</section>
+		<section class="image" id="image8">
+			<img src="images/meet rabbit.jpg" alt="meet rabbit" class="background">
+		</section>
+	</section>
+
+	<section class="page" id="page9" style="display:none;">
+		<section class="word" id="word9">
+			<h1>It's so nice to hanging around with you! Let's go home.</h1>
+			<button class="nextButton"> Sure!</button>
+			<a href="menu.html"> Back to Home </a>
+		</section>
+		<section class="image" id="image9">
+			<img src="images/hanging out.jpg" alt="hanging out" class="background">
+		</section>
+	</section>
+
+	<section class="page" id="page10" style="display:none;">
+		<section class="word" id="word10">
+			<h1>Feeling better? I hope you like to hang out with me!</h1>
+			<button class="nextButton"> Yes! I love it!</button>
+			<button class="nextButton"> No, I don't like it.</button>
+			<a href="menu.html"> Back to Home </a>
+		</section>
+		<section class="image" id="image10">
+			<img src="images/story asking.jpg" alt="storyasking" class="background">
+		</section>
+	</section>
+
+	<section class="page" id="page11" style="display:none;">
+		<section class="word" id="word11">
+			<h1>Hope we can meet again!</h1>
+			<a href="menu.html"> Bye! </a>
+			<a href="menu.html"> Back to Home </a>
+		</section>
+		<section class="image" id="image11">
+			<img src="images/story asking.jpg" alt="storyasking" class="background">
+		</section>
+	</section>
+
+	<script src="js/changePage.js" defer></script>
 </body>
 
 </html>
