@@ -50,6 +50,21 @@ body {
 	z-index: 0;
 }
 
+h1 {
+	font-size: 40px;
+	display: inline-block;
+	width: fit-content;
+	height: fit-content;
+	background-color: rgb(178, 98, 98);
+}
+
+a {
+	display: inline-block;
+	width: fit-content;
+	height: fit-content;
+	background-color: blanchedalmond;
+}
+
 
 
 /* This uses the same value as --size-xs. */
@@ -80,4 +95,5 @@ body {
 		max-width: 100%;
 		z-index: -1;
 	}
-} */}
+} */
+}
