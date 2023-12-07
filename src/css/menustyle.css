@@ -18,6 +18,13 @@ html {
 	position: relative;
 }
 
+.container img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
 .container .image img {
 	width: 100%;
 	height: 100%;
@@ -30,14 +37,7 @@ html {
 	padding-left: 50px;
 }
 
-.container img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1;
-}
-
-.container #homePageWord {
+.container #home-page-word {
 	position: relative;
 	z-index: 2;
 	min-width: 40%;
@@ -54,7 +54,7 @@ html {
 	padding: 0 50px;
 }
 
-.container #menuPageWord {
+.container #menu-page-word {
 	position: absolute;
 	z-index: 2;
 	right: 180px;
@@ -66,7 +66,7 @@ html {
 	flex-direction: column;
 }
 
-.container #menuPageWord a {
+.container #menu-page-word a {
 	display: block;
 	width: 180px;
 	height: 104px;
@@ -79,21 +79,21 @@ html {
 	margin-bottom: 30px;
 }
 
-.container #menuPageWord a:last-of-type {
+.container #menu-page-word a:last-of-type {
 	margin-bottom: 0;
 }
 
 /* This uses the same value as --size-xs. */
 @media screen and (width <=576px) {
-	#menuPageWord {
+	#menu-page-word {
 		display: none !important;
 	}
 
-	#homePageImage {
+	#home-page-image {
 		padding-left: 20px !important;
 	}
 
-	#homePageWord {
+	#home-page-word {
 		font-size: 26px !important;
 		min-width: 0 !important;
 		height: 70px !important;
@@ -140,11 +140,11 @@ html {
 }
 
 @media screen and (width >=576px) and (width <=1200px) {
-	#menuPageWord {
+	#menu-page-word {
 		display: none !important;
 	}
 
-	#homePageWord {
+	#home-page-word {
 		font-size: 26px !important;
 		min-width: 0 !important;
 		height: 70px !important;

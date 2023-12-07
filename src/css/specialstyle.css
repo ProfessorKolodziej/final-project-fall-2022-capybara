@@ -151,7 +151,7 @@ button {
 	font-size: x-large;
 }
 
-.backHome {
+.back-home {
 	position: absolute;
 	display: flex;
 	top: 650px;
