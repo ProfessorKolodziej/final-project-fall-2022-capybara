@@ -1,0 +1,18 @@
+/*
+CSS controls the styling of the page.
+You can write a color in directly, or use variables.
+Try changing the color from blue to red in the
+primary color variable below.
+*/
+
+/*
+ CSS doesn't allow variables to be used in media
+ queries just yet, but you can use these values
+ to help you out.
+
+	 --size-xs: 320px;
+	 --size-sm: 480px;
+	 --size-md: 768px;
+	 --size-lg: 1024px;
+	 --size-xl: 1200px;
+ */

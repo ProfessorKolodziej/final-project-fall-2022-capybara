@@ -40,20 +40,6 @@ html {
 }
 
 .container #home-page-word {
-	/* position: relative;
-	z-index: 2;
-	min-width: 40%;
-	max-width: 40%;
-	height: 160px;
-	border-radius: 1000px;
-	background-color: rgb(215 253 105 / 76%);
-	color: #83702E;
-	font-size: 38px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	box-sizing: border-box;
-	padding: 0 50px; */
 	font-family: 'Loved by the King', cursive;
 	font-size: 45px;
 	color: #83702E;
@@ -101,7 +87,7 @@ html {
 }
 
 /* This uses the same value as --size-xs. */
-@media screen and (width <=877px) {
+@media screen and (width <843px) {
 	#menu-page-word {
 		display: none !important;
 	}
@@ -180,7 +166,7 @@ html {
 	}
 }
 
-@media screen and (width >=877px) and (width <=1200px) {
+@media screen and (width >=843px) and (width <=1200px) {
 	#menu-page-word {
 		display: none !important;
 	}
