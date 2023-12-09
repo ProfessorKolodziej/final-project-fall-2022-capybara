@@ -58,17 +58,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		button.addEventListener('click', () => showPage(currentPage + 2));
 	});
 
-	document.querySelectorAll('.2skipButton').forEach(button => {
+	document.querySelectorAll('.jumpButton').forEach(button => {
 		button.addEventListener('click', () => showPage(currentPage + 3));
 	});
 });
 
 function showPage(pageNumber) {
-	// Hide the current page
 	document.getElementById("page" + currentPage).style.display = 'none';
-	// Update the current page to the new page
 	currentPage = pageNumber;
-	// Show the new page
 	document.getElementById("page" + currentPage).style.display = 'block';
 }
 

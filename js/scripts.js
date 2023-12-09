@@ -31,8 +31,8 @@ inp.addEventListener('input', (e) => {
 })
 
 const initFun = () => {
-	let oneBox = document.querySelector('.homePageWord')
-	let twoBox = document.querySelector('.homePageWorder')
+	let oneBox = document.querySelector('.home-page-word')
+	let twoBox = document.querySelector('.home-page-worder')
 	if (show) {
 		oneBox.style.display = "none"
 		twoBox.style.display = "flex";
