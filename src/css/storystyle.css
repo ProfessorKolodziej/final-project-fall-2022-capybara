@@ -21,79 +21,286 @@ to help you out.
 	--size-lg: 1024px;
 	--size-xl: 1200px;
 */
-a,
-h1,
-button {
-	text-decoration: inherit;
+
+
+body,
+html {
+	width: 100vw;
+	overflow-x: hidden;
+	height: 100vh;
+	background-color: #A19260;
 }
 
-body {
-	background-color: rgb(84 62 47);
-}
-
-.page {
+.container {
+	width: 100vw;
+	overflow: hidden;
+	height: 100vh;
 	position: relative;
-	max-width: 100%;
-	height: auto;
 }
 
-.word {
-	position: absolute;
+.container.page {
+	width: 100vw;
+	overflow: hidden;
+	height: 100vh;
+	position: relative;
+}
+
+.page h1 {
 	z-index: 1;
-	top: 50%;
-	left: 50%
+	font-family: 'Loved by the King', cursive;
 }
 
-.background {
+.page .image {
 	position: absolute;
-	max-width: 100%;
-	z-index: 0;
+	top: 0;
+	left: 0;
+	z-index: 1;
 }
 
-h1 {
-	font-size: 40px;
-	display: inline-block;
-	width: fit-content;
-	height: fit-content;
-	background-color: rgb(178 98 98);
+
+.page .button {
+	font-family: 'Indie Flower', cursive;
+	display: grid;
+	z-index: 2;
 }
 
 a {
 	display: inline-block;
-	width: fit-content;
-	height: fit-content;
+	border-radius: 10px;
+	text-align: center;
 	background-color: blanchedalmond;
+	border: 3px solid #000;
+	color: black;
 }
 
 
-
 /* This uses the same value as --size-xs. */
-@media screen and (width >=320px) {}
+@media screen and (width <843px) {
+	.page .interaction {
+		width: 100%;
+		position: absolute;
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+		bottom: 3%;
+		height: 36vh;
+	}
 
-@media screen and (width >=834px) {}
+	.page .image {
+		padding-left: 20px;
+		width: 100%;
 
-@media screen and (width >=1512px) {
-	/* .page {
+		/* 容器宽度为视口宽度的 100% */
+		height: 60vh;
+
+		/* 容器高度为视口高度的 60% */
+		overflow: hidden;
+
+		/* 隐藏超出容器的部分 */
 		position: relative;
-		max-width: 100%;
+
+		/* 相对定位，便于调整图片位置 */
+	}
+
+	.page .background {
+		height: 100%;
+		width: auto;
+		position: absolute;
+		left: 20%;
+		top: 50%;
+		transform: translate(-20%, -50%);
+	}
+
+	.page .interaction .word {
+		display: grid;
+		justify-self: center;
+		gap: 15px;
+	}
+
+	.page h1 {
+		font-size: 33px;
+	}
+
+	.interaction .button {
+		font-size: 25px;
+		justify-self: center;
+	}
+
+	a {
+		width: 200px;
+		height: 30px;
+		vertical-align: middle;
+		margin-top: 15px;
+		padding-top: 10px;
+	}
+
+	.homebutton {
+		height: 18px;
+		width: auto;
+	}
+
+
+}
+
+@media screen and (width >843px) and (width <=1200px) {
+	.page .interaction {
+		width: 100%;
+		position: absolute;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+		bottom: 3%;
+		height: 40vh;
+	}
+
+	.page .interaction .word {
+		display: grid;
+		justify-self: center;
+		gap: 40px;
+	}
+
+	.page h1 {
+		font-size: 33px;
+	}
+
+	.interaction .button {
+		font-size: 30px;
+		justify-self: center;
+	}
+
+	a {
+		width: 250px;
+		height: 50px;
+		vertical-align: middle;
+		margin-top: 30px;
+		padding-top: 15px;
+	}
+
+	.page .image img {
+		width: 100%;
 		height: auto;
+		margin-top: 0;
 	}
 
-	.image {
-		position: absolute;
-		max-width: 100%;
-		z-index: -1;
+	.page .image {
+		padding-left: 20px;
+		width: 100%;
+
+		/* 容器宽度为视口宽度的 100% */
+		height: 60vh;
+
+		/* 容器高度为视口高度的 60% */
+		overflow: hidden;
+
+		/* 隐藏超出容器的部分 */
+		position: relative;
+
+		/* 相对定位，便于调整图片位置 */
 	}
 
-	.word {
+	.page .background {
+		height: 100%;
+		width: auto;
 		position: absolute;
-		z-index: 1;
+
+		/* 绝对定位 */
+		left: 20%;
+
+		/* 水平居中 */
+		top: 37vw;
+
+		/* 垂直居中 */
+		transform: translate(-20%, -65%);
+
+		/* 同时水平和垂直居中图片 */
 	}
 
-	.background {
+	.page .image #background6,
+	#background7,
+	#background8,
+	#background9 {
 		position: absolute;
-		max-width: 100%;
-		z-index: -1;
+		left: 20%;
+		top: 50%;
+		transform: translate(-20%, -50%);
 	}
-} */
+
+	.homebutton {
+		height: 30px;
+		width: auto;
+	}
+
+
+}
+
+@media screen and (width >1200px) {
+	.under {
+		display: none;
+	}
+
+	.page .image img {
+		width: 100%;
+		height: auto;
+		margin-top: 0;
+	}
+
+	.page h1 {
+		position: absolute;
+		display: inline-block;
+		z-index: 2;
+		width: fit-content;
+		height: fit-content;
+		background-color: rgb(215 253 105 / 90%);
+		border-radius: 20px;
+		color: #83702E;
+		font-size: 45px;
+		padding: 30px;
+		top: 10%;
+		right: -13px;
+	}
+
+	.page .button {
+		position: absolute;
+		font-size: 30px;
+		top: 230px;
+		right: 40px;
+	}
+
+
+
+	a {
+		width: 250px;
+		height: 50px;
+		vertical-align: middle;
+		margin-top: 30px;
+		padding-top: 15px;
+	}
+
+	#chat1,
+	#chat3 {
+		top: 137px;
+		left: 225px;
+	}
+
+	#chat2,
+	#chat4 {
+		top: 26px;
+		right: 305px;
+	}
+
+	#button7,
+	#button8 {
+		top: 554px;
+		right: 40px;
+	}
+
+	.homebutton {
+		height: 30px;
+		width: auto;
+	}
+
 }

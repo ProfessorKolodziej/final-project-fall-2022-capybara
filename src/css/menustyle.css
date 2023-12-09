@@ -4,11 +4,13 @@ You can write a color in directly, or use variables.
 Try changing the color from blue to red in the
 primary color variable below.
 */
+
 body,
 html {
 	width: 100vw;
 	overflow-x: hidden;
 	height: 100vh;
+	background-color: #A19260;
 }
 
 .container {
@@ -27,7 +29,7 @@ html {
 
 .container .image img {
 	width: 100%;
-	height: 100%;
+	height: auto;
 	margin-top: 0;
 }
 
@@ -38,26 +40,26 @@ html {
 }
 
 .container #home-page-word {
+	font-family: 'Loved by the King', cursive;
+	font-size: 45px;
+	color: #83702E;
 	position: relative;
 	z-index: 2;
-	min-width: 40%;
-	max-width: 40%;
-	height: 160px;
-	border-radius: 1000px;
+	display: inline-block;
+	width: fit-content;
+	height: fit-content;
 	background-color: rgb(215 253 105 / 76%);
-	color: #83702E;
-	font-size: 38px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	box-sizing: border-box;
-	padding: 0 50px;
+	border-radius: 50px;
+	padding: 30px;
+	left: 10%;
 }
 
 .container #menu-page-word {
+	font-family: 'Indie Flower', cursive;
+	font-size: 30px;
 	position: absolute;
 	z-index: 2;
-	right: 180px;
+	right: 10%;
 	top: 0;
 	bottom: 0;
 	margin: auto;
@@ -67,15 +69,16 @@ html {
 }
 
 .container #menu-page-word a {
-	display: block;
 	width: 180px;
 	height: 104px;
 	background-color: #fff;
 	border: 3px solid #000;
-	color: #222;
-	line-height: 104px;
+	color: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
-	border-radius: 4px;
+	border-radius: 20px;
 	margin-bottom: 30px;
 }
 
@@ -84,30 +87,52 @@ html {
 }
 
 /* This uses the same value as --size-xs. */
-@media screen and (width <=576px) {
+@media screen and (width <843px) {
 	#menu-page-word {
 		display: none !important;
 	}
 
 	#home-page-image {
 		padding-left: 20px !important;
+		width: 100%;
+
+		/* 容器宽度为视口宽度的 100% */
+		height: 60vh;
+
+		/* 容器高度为视口高度的 60% */
+		overflow: hidden;
+
+		/* 隐藏超出容器的部分 */
+		position: relative;
+
+		/* 相对定位，便于调整图片位置 */
 	}
 
 	#home-page-word {
-		font-size: 26px !important;
-		min-width: 0 !important;
-		height: 70px !important;
-		max-width: 80vw !important;
-		width: 80vw;
+		font-size: 35px !important;
 		text-align: center;
-		box-sizing: border-box;
-		padding-top: 10px;
+		min-width: 0 !important;
+		max-width: 80vw !important;
+		width: 30vw;
 		margin-left: 10px !important;
 	}
 
-	.image,
-	img {
-		height: 60vh !important;
+
+	#home-page-image img {
+		height: 100%;
+		width: auto;
+		position: absolute;
+
+		/* 绝对定位 */
+		left: 20%;
+
+		/* 水平居中 */
+		top: 50%;
+
+		/* 垂直居中 */
+		transform: translate(-20%, -50%);
+
+		/* 同时水平和垂直居中图片 */
 	}
 
 	.under {
@@ -126,8 +151,10 @@ html {
 	}
 
 	.under section a {
-		width: 90px;
-		height: 42px;
+		font-family: 'Indie Flower', cursive;
+		font-size: 26px;
+		width: 160px;
+		height: 50%;
 		background-color: #fff;
 		border: 3px solid #000;
 		color: #222;
@@ -135,31 +162,64 @@ html {
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		border-radius: 4px;
+		border-radius: 20px;
 	}
 }
 
-@media screen and (width >=576px) and (width <=1200px) {
+@media screen and (width >=843px) and (width <=1200px) {
 	#menu-page-word {
 		display: none !important;
 	}
 
 	#home-page-word {
-		font-size: 26px !important;
+		display: flex;
+		font-size: 35px !important;
 		min-width: 0 !important;
-		height: 70px !important;
 		max-width: 80vw !important;
 		width: 30vw;
 		text-align: center;
-		box-sizing: border-box;
-		padding-top: 10px;
 		margin-left: 10px !important;
 	}
 
-	.image,
-	img {
-		height: 60vh !important;
+	#home-page-image {
+		width: 100%;
+
+		/* 容器宽度为视口宽度的 100% */
+		height: 60vh;
+
+		/* 容器高度为视口高度的 60% */
+		overflow: hidden;
+
+		/* 隐藏超出容器的部分 */
+		position: relative;
+
+		/* 相对定位，便于调整图片位置 */
 	}
+
+	#home-page-image img {
+		width: 100%;
+
+		/* 图片宽度自动调整以保持比例 */
+		height: auto;
+
+		/* 图片高度填满容器高度 */
+
+		/* 确保图片宽度至少与容器宽度相同 */
+		min-height: 100%;
+		position: absolute;
+
+		/* 绝对定位 */
+		left: 50%;
+
+		/* 水平居中 */
+		top: 50%;
+
+		/* 垂直居中 */
+		transform: translate(-50%, -50%);
+
+		/* 同时水平和垂直居中图片 */
+	}
+
 
 	.under {
 		width: 100%;
@@ -177,6 +237,8 @@ html {
 	}
 
 	.under section a {
+		font-family: 'Indie Flower', cursive;
+		font-size: 26px;
 		width: 160px;
 		height: 50%;
 		background-color: #fff;
@@ -185,6 +247,7 @@ html {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border-radius: 4px;
+		text-align: center;
+		border-radius: 20px;
 	}
 }

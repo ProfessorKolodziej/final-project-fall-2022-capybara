@@ -9,6 +9,7 @@ html {
 	width: 100vw;
 	overflow-x: hidden;
 	height: 100vh;
+	background-color: rgb(240 240 237);
 }
 
 .container {
@@ -20,7 +21,7 @@ html {
 
 .container .image>img {
 	width: 100%;
-	height: 100%;
+	height: auto;
 	margin-top: 0;
 	position: absolute;
 	top: 0;
@@ -34,50 +35,61 @@ html {
 	padding-left: 50px;
 }
 
-
 .container .home-page-word {
-	position: absolute;
 	z-index: 2;
-	right: 0;
+	right: 2%;
 	top: 0;
 	bottom: 0;
 	margin: auto;
-	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex-direction: column;
 }
 
 .container .home-page-word h1 {
+	font-family: 'Loved by the King', cursive;
 	font-size: 40px;
 	color: #83702E;
 	text-align: center;
-	line-height: 50px;
+	line-height: 55px;
 }
 
-.container .home-page-word .mid {
+.container .home-page-word .function {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+}
+
+.container .home-page-word .function .mid {
 	display: flex;
 	margin: 20px 0;
 }
 
-.container .home-page-word .mid .inp {
+.container .home-page-word .function .mid .inp {
+	font-family: 'Indie Flower', cursive;
+	font-size: 25px;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
 }
 
-.container .home-page-word .mid .inp input {
+.container .home-page-word .function .mid .inp input {
 	margin-top: 10px;
 }
 
-.container .home-page-word .bottom {
+.container .home-page-worder .bottom {
 	display: flex;
-	justify-content: space-between;
-	width: 50%;
 }
 
-.container .home-page-word a {
+.container .home-page-word .function .bottom {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	padding-left: 15px;
+}
+
+.container .home-page-word .button {
+	font-family: 'Indie Flower', cursive;
+	font-size: 20px;
 	display: block;
 	width: 100px;
 	height: 30px;
@@ -86,8 +98,9 @@ html {
 	color: #222;
 	line-height: 30px;
 	text-align: center;
-	border-radius: 4px;
+	border-radius: 10px;
 }
+
 
 .container .home-page-word img {
 	width: 30px;
@@ -106,27 +119,27 @@ html {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	margin-right: 50px;
+	padding-right: 50px;
+	padding-left: 50px;
 }
 
 .container .home-page-worder span {
-	font-weight: bold;
-	font-size: 30px;
+	font-family: 'Indie Flower', cursive;
+	font-size: 50px;
 	display: block;
 	margin: 10px 0;
 }
 
-.container .home-page-worder .bottom {
-	display: flex;
-}
 
 .container .home-page-worder .bottom a {
+	font-family: 'Indie Flower', cursive;
 	width: 50px;
 	height: 30px;
 	border: 3px solid #000;
 	text-align: center;
 	line-height: 33px;
 	cursor: pointer;
+	border-radius: 10px;
 }
 
 .container .home-page-worder .bottom a:nth-of-type(1) {
@@ -161,71 +174,91 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 /* This uses the same value as --size-xs. */
-@media screen and (width <=576px) {
-	.image,
-	.image>img {
-		height: 60vh !important;
+@media screen and (width <=877px) {
+	.container .home-page-word {
+		flex-direction: column;
+		row-gap: 15px;
 	}
 
-	.under {
+	#background {
 		width: 100%;
+		height: 60vh;
+		overflow: hidden;
+		position: relative;
+	}
+
+	#background #background-image {
+		height: 100%;
+		width: auto;
+		position: absolute;
+
+		/* 绝对定位 */
+		left: 20%;
+
+		/* 水平居中 */
+		top: 50%;
+
+		/* 垂直居中 */
+		transform: translate(-20%, -50%);
+
+		/* 同时水平和垂直居中图片 */
+	}
+
+	.container .home-page-worder {
+		position: relative;
 		height: 40vh;
-		background-color: #A19260;
-	}
-
-	.under section {
-		width: 100%;
-		height: 50%;
-		box-sizing: border-box;
-		display: flex;
-		justify-content: space-evenly;
-		align-items: center;
-	}
-
-	.under section a {
-		width: 90px;
-		height: 42px;
-		background-color: #fff;
-		border: 3px solid #000;
-		color: #222;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		border-radius: 4px;
 	}
 }
 
-@media screen and (width >=576px) and (width <=1200px) {
-	.image,
-	.image>img {
-		height: 60vh !important;
+@media screen and (width >=877px) and (width <=1200px) {
+	#background {
+		width: 100%;
+		height: 60vh;
+		overflow: hidden;
+		position: relative;
 	}
 
-	.under {
+	#background #background-image {
 		width: 100%;
+		height: auto;
+		min-height: 100%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.home-page-word {
+		position: relative;
 		height: 40vh;
-		background-color: #A19260;
-	}
-
-	.under section {
 		width: 100%;
-		height: 50%;
-		box-sizing: border-box;
-		display: flex;
-		justify-content: space-evenly;
-		align-items: center;
+		column-gap: 125px;
 	}
 
-	.under section a {
-		width: 160px;
-		height: 50%;
-		background-color: #fff;
-		border: 3px solid #000;
-		color: #222;
-		display: flex;
+	.title {
+		grid-column: 1 / 2;
 		justify-content: center;
 		align-items: center;
-		border-radius: 4px;
+	}
+
+	.function {
+		grid-column: 2 / 2;
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.container .home-page-worder {
+		position: relative;
+		height: 40vh;
+	}
+}
+
+@media screen and (width >=1200px) {
+	.container .home-page-word {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
 	}
 }

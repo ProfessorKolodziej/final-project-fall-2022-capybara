@@ -4,10 +4,6 @@ You can write a color in directly, or use variables.
 Try changing the color from blue to red in the
 primary color variable below.
 */
-:root {
-	--color-primary: blue;
-	--color-secondary: #c00;
-}
 
 /*
  CSS doesn't allow variables to be used in media
@@ -25,6 +21,7 @@ html {
 	width: 100vw;
 	overflow-x: hidden;
 	height: 100vh;
+	background-color: #A19260;
 }
 
 .container {
@@ -44,7 +41,7 @@ html {
 .container .image,
 .container .image img {
 	width: 100%;
-	height: 100%;
+	height: auto;
 	margin-top: 0;
 }
 
@@ -72,7 +69,13 @@ html {
 	margin: 0 auto;
 }
 
+.container h1 {
+	font-family: 'Loved by the King', cursive;
+	font-size: 40px !important;
+}
+
 .container a {
+	font-family: 'Indie Flower', cursive;
 	display: block;
 	width: 139px;
 	height: 64px;
@@ -81,53 +84,51 @@ html {
 	color: #222;
 	line-height: 64px;
 	text-align: center;
-	border-radius: 4px;
+	border-radius: 20px;
 }
 
 /* This uses the same value as --size-xs. */
 @media screen and (width <=576px) {
-	.image,
+	/* .image,
 	img {
 		height: 60vh !important;
 	}
 
 	.image {
 		padding-top: 30px !important;
-	}
+	} */
 
-	#home-page-word {
-		font-size: 26px !important;
-		display: inline-block !important;
-		min-width: 0 !important;
-		height: 70px !important;
-		text-align: center;
-		box-sizing: border-box;
-		padding-top: 10px;
-		margin-left: 30px !important;
-	}
-
-	#home-page-word a {
-		display: none;
-	}
-
-	.under {
+	#home-page-image {
+		padding-left: 20px !important;
 		width: 100%;
-		height: 40vh;
-		background-color: #A19260;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-}
 
-@media screen and (width >=576px) and (width <=1200px) {
-	.image,
-	img {
-		height: 60vh !important;
+		/* 容器宽度为视口宽度的 100% */
+		height: 60vh;
+
+		/* 容器高度为视口高度的 60% */
+		overflow: hidden;
+
+		/* 隐藏超出容器的部分 */
+		position: relative;
+
+		/* 相对定位，便于调整图片位置 */
 	}
 
-	.image {
-		padding-top: 30px !important;
+	#home-page-image img {
+		height: 100%;
+		width: auto;
+		position: absolute;
+
+		/* 绝对定位 */
+		left: 20%;
+
+		/* 水平居中 */
+		top: 50%;
+
+		/* 垂直居中 */
+		transform: translate(-20%, -50%);
+
+		/* 同时水平和垂直居中图片 */
 	}
 
 	#home-page-word {
@@ -137,6 +138,12 @@ html {
 		min-width: 0 !important;
 		display: inline-block !important;
 		line-height: 70px;
+		position: absolute !important;
+		top: 5%;
+	}
+
+	.under a {
+		font-size: 40px;
 	}
 
 	#home-page-word a {
@@ -151,4 +158,82 @@ html {
 		justify-content: center;
 		align-items: center;
 	}
+
+}
+
+@media screen and (width >=576px) and (width <=1200px) {
+	/* .image,
+	img {
+		height: 60vh !important;
+	}
+
+	.image {
+		padding-top: 30px !important;
+	} */
+
+	#home-page-image {
+		width: 100%;
+
+		/* 容器宽度为视口宽度的 100% */
+		height: 60vh;
+
+		/* 容器高度为视口高度的 60% */
+		overflow: hidden;
+
+		/* 隐藏超出容器的部分 */
+		position: relative;
+	}
+
+	#home-page-image img {
+		width: 100%;
+
+		/* 图片宽度自动调整以保持比例 */
+		height: auto;
+
+		/* 图片高度填满容器高度 */
+
+		/* 确保图片宽度至少与容器宽度相同 */
+		min-height: 100%;
+		position: absolute;
+
+		/* 绝对定位 */
+		left: 50%;
+
+		/* 水平居中 */
+		top: 50%;
+
+		/* 垂直居中 */
+		transform: translate(-50%, -50%);
+
+
+	}
+
+	#home-page-word {
+		margin: 0 0 0 50px !important;
+		font-size: 35px !important;
+		height: 70px !important;
+		min-width: 0 !important;
+		display: inline-block !important;
+		line-height: 70px;
+		position: absolute !important;
+		top: 5%;
+	}
+
+	.under a {
+		font-size: 40px;
+	}
+
+	#home-page-word a {
+		display: none;
+	}
+
+	.under {
+		width: 100%;
+		height: 40vh;
+		background-color: #A19260;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
 }

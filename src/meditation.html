@@ -12,14 +12,22 @@
 		-->
 	<link rel="stylesheet" href="css/reset.min.css">
 	<link rel="stylesheet" href="css/meditationstyle.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Loved+by+the+King&display=swap"
+		rel="stylesheet">
 </head>
 
 <body>
 	<section class="container">
-		<section class="image">
-			<img src="images/meditation.jpg" alt="Capybara">
-			<section class="home-page-word">
-				<h1>How long would you<br /> link to meditate?</h1>
+		<section class="image" id="background">
+			<img src="images/meditation.jpg" alt="Capybara" id="background-image">
+		</section>
+		<section class="home-page-word">
+			<section class="title">
+				<h1>How long would you<br /> like to meditate?</h1>
+			</section>
+			<section class="function">
 				<section class="mid">
 					<img src="./images/Icon/Clock.png" alt="">
 					<section class="inp">
@@ -29,26 +37,41 @@
 					<img src="./images/Icon/Chevronright.png" class="rightArrow" alt="">
 				</section>
 				<section class="bottom">
-					<img src="./images/Icon/Chevronleft.png" class="leftArrow" alt="">
-					<a href="./menu.html">Back</a>
-				</section>
-			</section>
-			<section class="home-page-worder">
-				<img src="./images/Icon/Clock.png" alt="">
-				<span class="timer">00:00:00</span>
-				<section class="ProgressBar"></section>
-				<section class="bottom">
-					<a class="back">Back</a>
-					<a class="play"></a>
+					<a href="./menu.html">
+						<img src="./images/Icon/Chevronleft.png" class="leftArrow" alt="">
+					</a>
+					<a href="./menu.html" class="button">Back</a>
 				</section>
 			</section>
 		</section>
-		<section class="under">
-			<a href="menu.html">
-				Enter
-			</a>
+		<section class="home-page-worder">
+			<img src="./images/Icon/Clock.png" alt="">
+			<span class="timer">00:00:00</span>
+			<section class="ProgressBar"></section>
+			<section class="bottom">
+				<a class="back">Back</a>
+				<a class="play"></a>
+			</section>
 		</section>
 	</section>
+	<!--<section class="under">
+		<section class="under-word" id="under-left-word">
+			<h1>How long would you<br /> like to meditate?</h1>
+		</section>
+		<section class="under-word" id="under-right-word">
+			<img src="./images/Icon/Clock.png" alt="">
+			<section class="inp">
+				<span class="time">00:00:00</span>
+				<input type="range" id="inputRange1" value="0" max="90" min="0">
+			</section>
+			<img src="./images/Icon/Chevronright.png" class="rightArrow" alt="">
+			<a href="./menu.html">
+				<img src="./images/Icon/Chevronleft.png" class="leftArrow" alt="">
+			</a>
+			<a href="./menu.html" class="button">Back</a>
+		</section>
+	</section>-->
+
 	<script src="js/scripts.js" defer></script>
 </body>
 

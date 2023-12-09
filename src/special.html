@@ -10,44 +10,45 @@
 	<!--
 			This is where you should link your CSS file.
 		-->
+	<link rel="stylesheet" href="css/reset.min.css">
 	<link rel="stylesheet" href="css/specialstyle.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Loved+by+the+King&display=swap"
+		rel="stylesheet">
 </head>
 
 <body>
 	<section id="page1" class="page">
-		<section class="box word" id="word1">
+		<section class="background">
+			<img src="images/something special.jpg" alt="background" class="bottom-image">
+		</section>
+		<section class="word" id="word1">
 			<h1>See what I found for you!</h1>
 		</section>
 		<section class="image-container" id="image1">
-			<img src="images/something special.jpg" alt="background" class="bottom-image">
 			<img src="images/realcapybara.jpg" alt="realcapybara" class="top-image">
 		</section>
 	</section>
 
 	<section id="page2" class="page" style="display:none;">
+		<section class="background">
+			<img src="images/something special.jpg" alt="background" class="bottom-image">
+		</section>
 		<section class="word" id="word2">
 			<h1>See what I found for you!</h1>
 		</section>
-		<section class="image-container" id="background2">
-			<img src="images/something special.jpg" alt="background" class="bottom-image">
+		<section class="image-container" id="image2">
 			<a href="https://vimeo.com/722803265" target="_blank">
 				<img src="images/videolink.png" alt="realcapybara" class="top-image">
 			</a>
 		</section>
 	</section>
+	<section class="link">
+		<a id="toggleButton" href="#">Toggle Page</a>
+		<a href="menu.html" class="back-home"> Back to Home </a>
+	</section>
 
-	<button id="toggleButton">Toggle Page</button>
-	<a href="menu.html" class="back-home"> Back to Home </a>
-	<!--	<div class="container">
-		<div class="box background">
-			<img src="images/something special.jpg" alt="background" class="image-responsive">
-		</div>
-		<div class="box button">
-			<button id="prevPage" style="display: none;">Previous Page</button>
-			<button id="nextPage">Next Page</button>
-		</div>
-		<script src="js/scripts.js" defer></script>
-	</div>-->
 	<script src="js/togglePage.js" defer></script>
 </body>
 
