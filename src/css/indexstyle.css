@@ -65,13 +65,13 @@ html {
 	align-items: center;
 	justify-content: space-between;
 	box-sizing: border-box;
-	padding: 0 50px;
+	padding: 0 30px;
 	margin: 0 auto;
 }
 
 .container h1 {
 	font-family: 'Loved by the King', cursive;
-	font-size: 40px !important;
+	font-size: 38px;
 }
 
 .container a {
@@ -89,51 +89,28 @@ html {
 
 /* This uses the same value as --size-xs. */
 @media screen and (width <=576px) {
-	/* .image,
-	img {
-		height: 60vh !important;
-	}
 
-	.image {
-		padding-top: 30px !important;
-	} */
 
 	#home-page-image {
 		padding-left: 20px !important;
 		width: 100%;
-
-		/* 容器宽度为视口宽度的 100% */
 		height: 60vh;
-
-		/* 容器高度为视口高度的 60% */
 		overflow: hidden;
-
-		/* 隐藏超出容器的部分 */
 		position: relative;
-
-		/* 相对定位，便于调整图片位置 */
 	}
 
 	#home-page-image img {
 		height: 100%;
 		width: auto;
 		position: absolute;
-
-		/* 绝对定位 */
 		left: 20%;
-
-		/* 水平居中 */
 		top: 50%;
-
-		/* 垂直居中 */
 		transform: translate(-20%, -50%);
-
-		/* 同时水平和垂直居中图片 */
 	}
 
 	#home-page-word {
 		margin: 0 0 0 50px !important;
-		font-size: 35px !important;
+		font-size: 25px !important;
 		height: 70px !important;
 		min-width: 0 !important;
 		display: inline-block !important;
@@ -162,50 +139,22 @@ html {
 }
 
 @media screen and (width >=576px) and (width <=1200px) {
-	/* .image,
-	img {
-		height: 60vh !important;
-	}
-
-	.image {
-		padding-top: 30px !important;
-	} */
 
 	#home-page-image {
 		width: 100%;
-
-		/* 容器宽度为视口宽度的 100% */
 		height: 60vh;
-
-		/* 容器高度为视口高度的 60% */
 		overflow: hidden;
-
-		/* 隐藏超出容器的部分 */
 		position: relative;
 	}
 
 	#home-page-image img {
 		width: 100%;
-
-		/* 图片宽度自动调整以保持比例 */
 		height: auto;
-
-		/* 图片高度填满容器高度 */
-
-		/* 确保图片宽度至少与容器宽度相同 */
 		min-height: 100%;
 		position: absolute;
-
-		/* 绝对定位 */
 		left: 50%;
-
-		/* 水平居中 */
 		top: 50%;
-
-		/* 垂直居中 */
 		transform: translate(-50%, -50%);
-
-
 	}
 
 	#home-page-word {
